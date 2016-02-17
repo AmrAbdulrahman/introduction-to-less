@@ -1,0 +1,55 @@
+/* basic */
+h1 {
+  font-size: 60px;
+}
+
+span {
+  color: red;
+}
+
+/* selectors: id */
+#hello-message {
+  color: blue;
+}
+
+/* selectors: class */
+.important {
+  color: orange;
+  text-transform: uppercase;
+}
+
+/* selectors: attributes */
+[disabled="disabled"] {
+  background-color: yellow;
+}
+
+/*******************************************************/
+/* selectors: one more step */
+/* grouping */
+h1, #hello-message {
+  background-color: pink;
+}
+
+/* combining selectors */
+.important.geddan {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* nesting/scoping */
+.parent {
+  background-color: yellow;
+}
+
+.parent .important {
+  color: red;
+  display: inline-block;
+  background-color: #fff;
+}
+
+/*******************************************************/
+/* selectors: psudo-classes */
+#hello-message:hover {
+  background-color: red;
+  cursor: pointer;
+}

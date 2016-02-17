@@ -1,0 +1,8 @@
+* {
+  border: 1px dashed gray;
+  margin: 10px 5px;
+}
+
+html, body {
+  border: none;
+}
