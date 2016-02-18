@@ -1,0 +1,65 @@
+@import "colors-v6";
+@import "mixins";
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.make-button(@color-base) {
+  &:extend(.btn);
+
+  @background: lighten(@color-base, 10%);
+  @border: @color-base;
+  @background-hover: darken(@color-base, 5%);
+  @border-hover: darken(@color-base, 10%);
+
+  color: @white;
+  background-color: @background;
+  border-color: @border;
+
+  &:hover {
+    background-color: @background-hover;
+    border-color: @border-hover;
+  }
+
+  .clickable;
+}
+
+// default
+.btn-default {
+  .make-button(lighten(@gray, 5%));
+  color: @black; // override
+}
+
+// primary
+.btn-primary {
+  .make-button(@blue);
+}
+
+// success
+.btn-success {
+  .make-button(@green);
+}
+
+// info
+.btn-info {
+  .make-button(@cyan);
+}
+
+// warning
+.btn-warning {
+  .make-button(@orange);
+}
+
+// danger
+.btn-danger {
+  .make-button(@red);
+}
